@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #4a90e2, #63b3ed),
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.12'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2v-4h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V4h4V0H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-blend-mode: overlay; /* Fügt das Muster über den Farbverlauf hinzu */
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.header-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 1.1em;
+}
+
+main {
+    padding: 20px;
+}
+
+.project {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.project.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-content {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.project-content img,
+.project-content video {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.project-text h2 {
+    color: #4a90e2;
+    margin-bottom: 10px;
+}
+
+.version-buttons {
+    margin-top: 15px;
+}
+
+.version-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.version-button:hover {
+    background-color: #63b3ed;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+footer a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+    .project-content {
+        flex-direction: column;
+    }
+
+    .project-content img,
+    .project-content video {
+        max-width: 100%;
+    }
+
+    .project-text {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Jedes zweite Element rechtsbündig */
+.project:nth-child(even) .project-content {
+    flex-direction: row-reverse;
+}

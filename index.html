@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Portfolio - Abdulkarim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Meine 3D Projekte</h1>
+    </header>
+
+    <main>
+        <section id="animRig" class="reveal left">
+            <div class="text">
+                <h2>Video</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.</p>
+            </div>
+            <video width="400" controls>
+                <source src="Abdulkarim_Amadeus_Rig.mp4" type="video/mp4">
+                Your browser does not support HTML video.
+            </video>
+            
+            
+        </section>
+
+        <section id="polygonRoboter" class="reveal right">
+            <img src="" alt="">
+            <div class="text">
+                <h2>Foto, muss noch überarbeitet werden</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.</p>
+            </div>
+        </section>
+
+        <section id="mimik" class="reveal left">
+            <div class="text">
+                <h2>Video</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.</p>
+            </div>
+            <video width="400" controls>
+                <source src="Abdulkarim_Amadeus_Mimik.mp4" type="video/mp4">
+                Your browser does not support HTML video.
+            </video>
+        </section>
+
+        <section id="lightsaber" class="reveal right">
+            <img src="Abdulkarim_Amadeus_Lichtschwert.jpg" alt="Lichtschwert Bild">
+            <div class="text">
+                <h2>Lichtschwert Foto</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.</p>
+            </div>
+        </section>
+
+        <section id="minion" class="reveal left">
+            <div class="text">
+                <h2>XGen Minion</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.</p>
+            </div>
+            <img src="Abdulkarim_Amadeus_XGen.jpg" alt="XGen">
+        </section>
+
+        <section id="ufo" class="reveal right">
+            <video width="400" controls>
+                <source src="Abdulkarim_Amadeus_UFO.mp4" type="video/mp4">
+                Your browser does not support HTML video.
+            </video>
+            <div class="text">
+                <h2>Video, muss noch überarbeitet werden</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.</p>
+
+                <button class="select-button">
+                    Version 1
+                </button>
+
+                <button class="select-button">
+                    Version 2
+                </button>
+            </div>
+
+            
+        </section>
+
+        <section id="keyframe" class="reveal left">
+            <div class="text">
+                <h2>Video, muss noch überarbeitet werden</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.</p>
+
+                <button class="select-button">
+                    Version 1
+                </button>
+
+                <button class="select-button">
+                    Version 2
+                </button>
+            </div>
+            <video width="400" controls>
+                <source src="Abdulkarim_Amadeus_Logo.mp4" type="video/mp4">
+                Your browser does not support HTML video.
+            </video>
+
+        </section>
+
+        <section id="stufen" class="reveal right">
+            <video width="400" controls>
+                <source src="Abdulkarim_Amadeus_Entwicklungsstufen.mp4" type="video/mp4">
+                Your browser does not support HTML video.
+            </video>
+            <div class="text">
+                <h2>Video, Kamerafahrt muss noch überarbeitet werden</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.</p>
+
+                <button class="select-button">
+                    Version 1
+                </button>
+    
+                <button class="select-button">
+                    Version 2
+                </button>
+            </div>
+         
+        </section>
+    </main>
+
+    <script>
+        const sections = document.querySelectorAll(".reveal");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.2 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+    <footer>
+        <h2>Impressum</h2>
+        <p>Angaben gemäß § 5 TMG</p>
+        <p>Abdulkarim Amadeus<br>
+            Musterstraße 1<br>
+            12345 Musterstadt</p>
+        <p>Kontakt:<br>
+            Telefon: 01234/567890<br>
+            E-Mail: info@abdulkarim-portfolio.de</p>
+        <p>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:<br>
+            Abdulkarim Amadeus (Adresse wie oben)</p>
+    </footer>
+</body>
+
+</html>
